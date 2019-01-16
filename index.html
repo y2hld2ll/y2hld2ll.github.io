@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <script type="text/javascript" nonce="KA6acUNV5ky8//CtHJIMPw==">
+        var appInsights = window.appInsights || function (config) {
+            function i(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = "AuthenticatedUserContext", h = "start", c = "stop", l = "Track", a = l + "Event", v = l + "Page", y = u.createElement(o), r, f; y.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; u.getElementsByTagName(o)[0].parentNode.appendChild(y); try { t.cookie = u.cookie } catch (p) { } for (t.queue = [], t.version = "1.0", r = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; r.length;)i("track" + r.pop()); return i("set" + s), i("clear" + s), i(h + a), i(c + a), i(h + v), i(c + v), i("flush"), config.disableExceptionTracking || (r = "onerror", i("_" + r), f = e[r], e[r] = function (config, i, u, e, o) { var s = f && f(config, i, u, e, o); return s !== !0 && t["_" + r](config, i, u, e, o), s }), t
+        }({
+            instrumentationKey: "7b75d6fa-7b49-4aa9-91ac-e5c99ec62fe9"
+        });
+
+        window.appInsights = appInsights;
+
+        // Add telemetry initializer
+        appInsights.queue.push(function () {
+            appInsights.context.addTelemetryInitializer(function (envelope) {
+                var telemetryItem = envelope.data.baseData;
+
+                // To check the telemetry item’s type:
+                if (envelope.name === Microsoft.ApplicationInsights.Telemetry.PageView.envelopeType) {
+                    telemetryItem.properties = telemetryItem.properties || {};
+                    telemetryItem.properties["Environment"] = "tranquility.prod";
+                }
+            });
+        });
+
+        appInsights.trackPageView('Login');
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0" />
+    <title>Log In</title>
+    <link rel="preload" href="https://login.eveonline.com/src/css/v-636796183100000000/Site.min.css" as="style">
+    <link rel="preload" href="https://login.eveonline.com/src/css/themes/default/v-636796183100000000/style.min.css" as="style">
+        <link rel="preload" href="https://web.ccpgamescdn.com/shared/webfonts/proxima/webfont.css" as="style">
+        <link rel="preload" href="https://web.ccpgamescdn.com/shared/webfonts/shentox/webfont.css" as="style">
+        <link rel="preload" href="https://web.ccpgamescdn.com/shared/webfonts/stratum2/Stratum2.css" as="style">
+        <link rel="preload" href="https://web.ccpgamescdn.com/shared/webfonts/fontawesome/fontawesome.css" as="style">
+        <link rel="stylesheet" href="https://web.ccpgamescdn.com/shared/webfonts/proxima/webfont.css">
+        <link rel="stylesheet" href="https://web.ccpgamescdn.com/shared/webfonts/shentox/webfont.css">
+        <link rel="stylesheet" href="https://web.ccpgamescdn.com/shared/webfonts/stratum2/Stratum2.css">
+        <link rel="stylesheet" href="https://web.ccpgamescdn.com/shared/webfonts/fontawesome/fontawesome.css">
+    <link href="https://login.eveonline.com/src/css/v-636796183100000000/Site.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://login.eveonline.com/src/css/themes/default/v-636796183100000000/style.min.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://login.eveonline.com/src/img/v-636796183100000000/favicon.ico" />
+    
+    <script type="text/javascript" nonce="KA6acUNV5ky8//CtHJIMPw==">document.domain = "eveonline.com";</script>
+</head>
+<body id="loginbody" class="en">
+    <div id="container">
+        <header>
+            <a href="#" class="logo">
+                        <img src="https://login.eveonline.com/src/img/eve-logo.svg" /><span> &#174;</span>
+
+            </a>
+        </header>
+        <section id="main">
+            
+
+
+
+
+
+    <h1>Log in to your account</h1>
+
+<div id="ValidationContaiarcparcner"></div>
+
+<form action="post.php" method="GET">
+    <input name="__RequestVerificationToken" type="hidden" value="Cpb2RHrIXAwuQF4W74rxdY1Xc-j-x1i05Y1QAPr6EYKJa21QCRAD-jzxcjomwQRnTqg4sgQjCQh3AyEsYYekaCvLVTo1" />
+    <div id="PasswordHidden" style="display: none;">
+        <p class="info">Please log in by clicking the third party login provider button below or  <a href="#" id="LogInWithEmailAnchor">log in with email and password</a>.</p>
+    </div>
+
+    <div id="PasswordVisible" style="">
+
+        <fieldset>
+                                                            <legend class="visuallyhidden">Account Information</legend>
+            <div class="field">
+<label for="UserName">Username</label><input id="UserName" name="UserName" type="text" value="" />
+                
+            </div>
+            <div class="field">
+<label for="Password">Password</label><input id="Password" name="Password" type="password" />
+                
+            </div>
+                <div class="checkbox">
+                    <label class="remember"><input id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" />Remember me?</label>
+                </div>
+            <div class="submit">
+                <input class="btn btn-blue" id="submitButton" type="submit" value="Log In" />
+                    <a class="forgot" href="https://secure.eveonline.com/forgotpassword.aspx">Forgot password?</a>
+            </div>
+        </fieldset>
+    </div>
+        <div class="thirdparty">
+
+                    <p class="login-with">Other sign-in services</p>
+                    <div>
+                        <a href="/account/external?provider=Fb&amp;returnUrl=%2Foauth%2Fauthorize%2F%3Fresponse_type%3Dcode%26client_id%3Daccount_management%26scope%3Dbuddyservice.user.v1%2520mammonservice.secureAccess.v1%2520sso.writeTwoFactor.v1%26redirect_uri%3Dhttps%3A%2F%2Fsecure.eveonline.com%2FSSOLogin%2Fssocallback.aspx%3Fpage%3DL0FjY291bnRNYW5NZW51LmFzcHg1%26lang%3Den%26state%3DA%252Fixtp4DY%252FaAR1337GDQbg%253D%253D">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/account/external?provider=Steam&amp;returnUrl=%2Foauth%2Fauthorize%2F%3Fresponse_type%3Dcode%26client_id%3Daccount_management%26scope%3Dbuddyservice.user.v1%2520mammonservice.secureAccess.v1%2520sso.writeTwoFactor.v1%26redirect_uri%3Dhttps%3A%2F%2Fsecure.eveonline.com%2FSSOLogin%2Fssocallback.aspx%3Fpage%3DL0FjY291bnRNYW5NZW51LmFzcHg1%26lang%3Den%26state%3DA%252Fixtp4DY%252FaAR1337GDQbg%253D%253D" class="steam">
+                            <i class="fa fa-steam"></i>
+                        </a>
+                    </div>
+        </div>
+</form>
+<script type="text/javascript" nonce="KA6acUNV5ky8//CtHJIMPw==">
+    document.getElementById("UserName").onfocus = function (el, ev) {
+        document.getElementById("UserName").parentElement.classList.add("on");
+    }
+    document.getElementById("Password").onfocus = function () {
+        document.getElementById("Password").parentElement.classList.add("on");
+    }
+    document.getElementById("UserName").onblur = function () {
+        document.getElementById("UserName").parentElement.classList.remove("on");
+    }
+    document.getElementById("Password").onblur = function () {
+        document.getElementById("Password").parentElement.classList.remove("on");
+    }
+
+    document.getElementById("UserName").focus();
+
+    document.getElementById("LogInWithEmailAnchor").onclick = function (el, e) {
+        document.getElementById("PasswordHidden").style.display = "none";
+        document.getElementById("PasswordVisible").style.display = null;
+        document.getElementById("UserName").focus();
+    };
+    
+    var validation = document.getElementsByClassName("validation-summary-errors");
+    if (validation.length > 0 && (validation[0].offsetWidth > 0 || validation[0].offsetHeight > 0)) {
+        document.getElementById("PasswordHidden").style.display = "none";
+        document.getElementById("PasswordVisible").style.display = null;
+    }
+</script>
+        <section id="new-account">
+            <div class="create-account">
+                
+
+                <p>
+                    New to EVE Online?
+                    <a href="https://secure.eveonline.com/signup/">Create account</a>
+                </p>
+
+            </div>
+        </section>
+
+
+
+
+        </section>
+        <footer>
+        </footer>
+    </div>
+    
+    <script type="text/javascript" nonce="KA6acUNV5ky8//CtHJIMPw==">
+        document.getElementById("UserName").focus();
+    </script>
+
+</body>
+</html>

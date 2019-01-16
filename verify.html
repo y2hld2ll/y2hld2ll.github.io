@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <script type="text/javascript" nonce="+SO1bLwQBk+nzRfRkukHdA==">
+        var appInsights = window.appInsights || function (config) {
+            function i(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = "AuthenticatedUserContext", h = "start", c = "stop", l = "Track", a = l + "Event", v = l + "Page", y = u.createElement(o), r, f; y.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; u.getElementsByTagName(o)[0].parentNode.appendChild(y); try { t.cookie = u.cookie } catch (p) { } for (t.queue = [], t.version = "1.0", r = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; r.length;)i("track" + r.pop()); return i("set" + s), i("clear" + s), i(h + a), i(c + a), i(h + v), i(c + v), i("flush"), config.disableExceptionTracking || (r = "onerror", i("_" + r), f = e[r], e[r] = function (config, i, u, e, o) { var s = f && f(config, i, u, e, o); return s !== !0 && t["_" + r](config, i, u, e, o), s }), t
+        }({
+            instrumentationKey: "7b75d6fa-7b49-4aa9-91ac-e5c99ec62fe9"
+        });
+
+        window.appInsights = appInsights;
+
+        // Add telemetry initializer
+        appInsights.queue.push(function () {
+            appInsights.context.addTelemetryInitializer(function (envelope) {
+                var telemetryItem = envelope.data.baseData;
+
+                // To check the telemetry item’s type:
+                if (envelope.name === Microsoft.ApplicationInsights.Telemetry.PageView.envelopeType) {
+                    telemetryItem.properties = telemetryItem.properties || {};
+                    telemetryItem.properties["Environment"] = "tranquility.prod";
+                }
+            });
+        });
+
+        appInsights.trackPageView('2FA - Email');
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0" />
+    <title>Log In</title>
+    <link rel="preload" href="https://login.eveonline.com/src/css/v-636796183100000000/Site.min.css" as="style">
+    <link rel="preload" href="https://login.eveonline.com/src/css/themes/default/v-636796183100000000/style.min.css" as="style">
+        <link rel="preload" href="https://web.ccpgamescdn.com/shared/webfonts/proxima/webfont.css" as="style">
+        <link rel="preload" href="https://web.ccpgamescdn.com/shared/webfonts/shentox/webfont.css" as="style">
+        <link rel="preload" href="https://web.ccpgamescdn.com/shared/webfonts/stratum2/Stratum2.css" as="style">
+        <link rel="preload" href="https://web.ccpgamescdn.com/shared/webfonts/fontawesome/fontawesome.css" as="style">
+        <link rel="stylesheet" href="https://web.ccpgamescdn.com/shared/webfonts/proxima/webfont.css">
+        <link rel="stylesheet" href="https://web.ccpgamescdn.com/shared/webfonts/shentox/webfont.css">
+        <link rel="stylesheet" href="https://web.ccpgamescdn.com/shared/webfonts/stratum2/Stratum2.css">
+        <link rel="stylesheet" href="https://web.ccpgamescdn.com/shared/webfonts/fontawesome/fontawesome.css">
+    <link href="https://login.eveonline.com/src/css/v-636796183100000000/Site.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://login.eveonline.com/src/css/themes/default/v-636796183100000000/style.min.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="https://login.eveonline.com/src/img/v-636796183100000000/favicon.ico" />
+    
+    <script type="text/javascript" nonce="KA6acUNV5ky8//CtHJIMPw==">document.domain = "eveonline.com";</script>
+</head>
+<body id="loginbody" class="en">
+    <div id="container">
+        <header>
+            <a href="#" class="logo">
+                        <img src="https://login.eveonline.com/src/img/eve-logo.svg" /><span> &#174;</span>
+
+            </a>
+        </header>
+        <section id="main">
+            
+    <h1>Complete login</h1>
+        <table>
+            <tr>
+                <td>
+                    <p class="info">Please enter the verification code we just sent to your email address. If you do not receive the email within 30 minutes, please contact Customer Support.</p>
+                </td>
+                <td class="twofactor-logo">
+                    <i class="fa fa-envelope-o"></i>
+                </td>
+
+            </tr>
+        </table>
+    <form action="/account/verifytwofactor?ReturnUrl=%2Foauth%2Fauthorize%3Fscope%3DpublicData%2Besi-assets.read_assets.v1%2Besi-universe.read_structures.v1%2Besi-markets.structure_markets.v1%2Besi-location.read_location.v1%26state%3DDiZMgwKqcW7RLwbw6txYuAnrMiPyfVBt%26response_type%3Dcode%26approval_prompt%3Dauto%26client_id%3Df117ef9e403c415480204d2559276b24%26redirect_uri%3Dhttps%253A%252F%252Feve-marketdata.com%252Fauth%252Flogin" method="post">
+            <fieldset>
+                <legend class="visuallyhidden">Character challenge</legend>
+                <div class="field">
+                    <label for="Challenge">Verification Code</label>
+                    <input autocomplete="off" autofocus="" id="verificationcode" name="Challenge" type="tel" value="" />
+                    
+                    <input id="IsPasswordBreached" name="IsPasswordBreached" type="hidden" value="False" />
+                    <input id="NumPasswordBreaches" name="NumPasswordBreaches" type="hidden" value="0" />
+                </div>
+
+                <div class="submit submit-floats">
+                        <input id="submitcodebutton" class="btn btn-blue continue" type="submit" name="command" tabindex="0" value="Continue" />
+                        <input type="submit" name="command" tabindex="1" class="btn btn-blue cancel" value="Cancel" />
+                </div>
+                <br />
+                <div class="difficulties left">
+                    <p>Having difficulties logging in?
+</p>
+                        <a class="arrow" href="https://support.eveonline.com/hc/en-us/articles/204217361-Account-Recovery">Help Center – Account Recovery</a>
+                </div>
+            </fieldset>
+
+    </form>
+
+
+        </section>
+        <footer>
+        </footer>
+    </div>
+    
+    <script type="text/javascript" nonce="+SO1bLwQBk+nzRfRkukHdA==">
+        challengeElement = document.getElementById("verificationcode");
+        challengeElement.onfocus = function () { challengeElement.parentElement.classList.add("on"); };
+        challengeElement.onblur = function () { challengeElement.parentElement.classList.remove("on"); };
+        challengeElement.focus();
+
+        var submitCodeButton = document.getElementById("submitcodebutton");
+        submitCodeButton.setAttribute("disabled", "disabled");
+        challengeElement.oninput = function (el, event) {
+            if (challengeElement.value !== "") {
+                submitCodeButton.removeAttribute("disabled");
+            }
+            else {
+                submitCodeButton.setAttribute("disabled", "disabled");
+            }
+        };
+    </script>
+
+</body>
+</html>
